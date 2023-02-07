@@ -1,3 +1,6 @@
+// Esperanza Macias 
+// February 07, 2023
+
 fun main() {
    val myAge = 22;
    var averageAge = (22.0 + 30) / 2
