@@ -1,19 +1,32 @@
 // Esperanza Macias
 // Feb 12 2023
 
-import java.util.Scanner  
-fun main(args: Array<String>) {  
-    val input = Scanner(System.`in`)  
-    println("Enter amount of money ")  
-    var P = input.nextInt()  
-    println("Enter the interest rate ")
-    var R = input.nextInt()
-    println("Enter the number of year(s)")
-    var T = input.nextInt()
-    println("Ente the numer of times the money will be compunded ")
-    var N = input.nextInt()
+import kotlin.math.pow
+
+fun main() {
+    
+    // take user input
+    print("Enter the principal amount deposited: ")
+    
+    val principal = readLine()!!.toDouble()
+
+    print("Enter the annual interest rate: ")
+    
+    val annualRate = readLine()!!.toDouble()
+
+    print("Enter the number of times interest is compounded per year: ")
+    
+    val compoundPeriods = readLine()!!.toInt()
+
+    print("Enter the number of years: ")
+    val years = readLine()!!.toInt()
+
+    // calculate the amount of money in the account after the specified number of years
+    val ratePerPeriod = annualRate / compoundPeriods / 100
+    
+    val periods = compoundPeriods * years
+    val amount = principal * (1 + ratePerPeriod).pow(periods)
+
    
-    val  A = P.toDouble() * Math.pow((1 + R.toDouble()/100.00),T.toDouble()) - P
-    println(A)
-   
-} 
+    println("The amount of money in the account after $years years is: $$amount")
+}
