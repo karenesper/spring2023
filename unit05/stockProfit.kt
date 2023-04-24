@@ -29,5 +29,8 @@ fun main() {
         println("The sale of stock resulted in a loss of $${-profit}.")
     } else {
         println("The sale of stock resulted in neither profit nor loss.")
+        
+        // If the value of profit is greater than 0, the sale of stock resulted in a profit, so the first condition is executed, and it prints a message indicating the amount of profit.
+        // if the value of profit is equal to 0, it means that the sale of stock resulted in neither profit nor loss, so the else statement is executed, and it prints a message indicating that there is no profit or loss.
     }
 }
